@@ -1,0 +1,19 @@
+.header {
+    background: var(--gray-700);
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 0;
+  }
+  
+  .header h1 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem;
+    color: var(--blue-clean);
+    font-weight: bolder;
+  }
+
+  strong {
+    color: var(--purple-dark);
+  }
