@@ -1,17 +1,21 @@
 import styles from './Task.module.css'
 
+interface TaskProps {
+    created: number;
+    completed: number;
+}
 
-export function Task() {
+export function Task(props: TaskProps) {
     return (
         <header className={styles.container}>
             <aside>
                 <p>Tarefas criadas</p>
-                <span>0</span>
+                <span>{props.created}</span>
             </aside>
 
             <aside>
                 <p>Concluídas</p>
-                <span>0</span>
+                <span>{props.completed} de {props.created}</span>
             </aside>
         </header>
     )

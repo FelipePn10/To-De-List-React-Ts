@@ -15,4 +15,10 @@
   .container p {
     display: flex;
     flex-direction: column;
+    color: var(--gray-100);
+  }
+
+  ul,
+  li {
+    list-style-type: none;
   }

@@ -2,17 +2,17 @@
 import React from 'react';
 // Importando estilos e ícone
 import styles from './Button.module.css';
-import { Trash } from '@phosphor-icons/react';
+import { PlusCircle } from '@phosphor-icons/react';
 
 interface ButtonProps {
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void; // Definindo o tipo da prop onClick como uma função que recebe um evento como parâmetro
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void; // Definindo o tipo da prop onClick como uma função que recebe um evento como parâmetro
 }
 
-export function Button({ onClick }: ButtonProps) {
+export function Button({ onClick, }: ButtonProps) {
   return (
     <button className={styles.btn} onClick={onClick}>
       Criar 
-      <Trash size={20} />
+      <PlusCircle size={20} />
     </button>
   );
 }
