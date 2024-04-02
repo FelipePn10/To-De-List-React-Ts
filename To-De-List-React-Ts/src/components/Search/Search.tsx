@@ -1,3 +1,4 @@
+//Importando os estilos
 import styles from './Search.module.css';
 
 //Essa interface é para definir os tipos de dados que a função Search pode receber por parâmetro

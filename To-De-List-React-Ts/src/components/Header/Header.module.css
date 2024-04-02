@@ -19,4 +19,10 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  color: var(--blue-clean);
+}
+
+span {
+  color: var(--purple-clean);
 }

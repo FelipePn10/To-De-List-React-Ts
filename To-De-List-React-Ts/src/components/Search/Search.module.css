@@ -23,3 +23,13 @@
   .container:focus {
     border-color: var(--purple-dark);
   }
+
+
+  @media (max-width: 756px) {
+    .container {
+      width: 100%; /* Alterando a largura para ocupar toda a largura disponível */
+      max-width: 100%; /* Garantindo que a largura máxima seja 100% */
+      padding: 0.5rem; /* Reduzindo o padding para dispositivos móveis */
+      margin-left: 0.995rem;  /* Adicionando um pequeno espaço entre os campos de entrada em dispositivos móveis */
+    }
+  }

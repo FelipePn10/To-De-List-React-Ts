@@ -35,3 +35,28 @@
     color: var(--gray-200);
     background-color: var(--gray-400);
   }
+
+  .created {
+    color: var(--blue-clean);
+  }
+
+  .completed {
+    color: var(--purple-clean);
+  }
+
+  @media (max-width: 756px) {
+    .container {
+      flex-direction: column; /* Alterando a direção do flex para empilhar os elementos verticalmente */
+      margin-left: 0.990rem;
+      margin-right: 0.990rem;
+    }
+  
+    .container aside {
+      width: 100%; /* Garantindo que os elementos ocupem toda a largura disponível */
+      justify-content: space-between; /* Espaçamento igual entre os elementos */
+    }
+  
+    .container aside span {
+      margin-top: 0.5rem; /* Adicionando espaço acima do span */
+    }
+  }

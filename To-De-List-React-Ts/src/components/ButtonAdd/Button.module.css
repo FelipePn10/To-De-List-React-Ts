@@ -25,3 +25,12 @@
   .btn:hover {
     background-color: var(--blue);
   }
+
+  @media (max-width: 756px) {
+    .btn {
+      margin-right: 0.995rem;
+      max-width: 100%; /* Garantindo que a largura máxima seja 100% */
+      padding: 0.75rem; /* Reduzindo um pouco o padding para dispositivos móveis */
+      font-size: 0.75rem; /* Reduzindo o tamanho da fonte para dispositivos móveis */
+    }
+  }

@@ -16,9 +16,11 @@ export function App() {
   // Estado para armazenar as tarefas:
   const [tasks, setTasks] = useState<TaskType[]>([]);
 
+  //Esse estado serve para  verificarmos se o usuário está digitando ou não no campo de texto da task.
   const [task, setTask] = useState("");
+  
 
-  // Função para adicionar uma nova tarefa ao estado de tarefas:
+    // Função para adicionar uma nova tarefa ao estado de tarefas:
   const addTask = (taskName: string) => {
     setTasks([
       ...tasks,
@@ -26,13 +28,18 @@ export function App() {
     ]);
   };
 
+  //Essa função  serve para atualizar a task quando o input é alterado:
   const handleTaskDelete = (id: string) => {
     setTasks(tasks.filter((value) => value.id !== id));
   };
+  
+
+  //Essa função abaixo é para  atualizar a lista das tasks quando o input muda
   const handleTaskChange = (id: string, done: boolean) => {
     setTasks(tasks.map((item) => (item.id === id ? { ...item, done } : item)));
   };
 
+  //Essa função serve para  calcular a porcentagem da quantidade de tarefas que foram realizadas e mostrar no paragrafo
   const completed = useMemo(
     () =>
       tasks.reduce((total, task) => {
@@ -41,6 +48,7 @@ export function App() {
     [tasks]
   );
 
+  //Essa função serve para  limpar as tasks do state e nao deixar o form recarregar a pagina
   const handleTaskAdd: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     if (!task.trim()) return;
